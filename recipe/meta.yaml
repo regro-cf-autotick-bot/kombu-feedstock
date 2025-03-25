@@ -1,5 +1,5 @@
 {% set name = "kombu" %}
-{% set version = "5.4.1" %}
+{% set version = "5.5.1" %}
 # Latest python_min is defined in https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/main/recipe/conda_build_config.yaml
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kombu-{{ version }}.tar.gz
-  sha256: 1c05178826dab811f8cab5b0a154d42a7a33d8bcdde9fa3d7b4582e43c3c03db
+  sha256: a4c2250396cdfb947c5e5322f3094fd36c3f86a1cff655f5cffdf45f371dddb8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
